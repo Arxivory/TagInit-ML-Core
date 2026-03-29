@@ -44,7 +44,7 @@ The model uses a U-Net backbone to maintain high-resolution spatial information.
 
 ### 3. Physics-Informed Loss Function
 Unlike standard CNNs that only use Mean Squared Error (MSE), this model incorporates the **Heat Diffusion Equation** as a regularization term:
-$$\mathcal{L}_{total} = \mathcal{L}_{MSE} + \lambda \mathcal{L}_{physics}$$
+$\mathcal{L}_{total} = \mathcal{L}_{MSE} + \lambda \mathcal{L}_{physics}$
 The physics loss uses a **Laplacian Kernel** ($\nabla^2$) to penalize physically impossible heat spikes and ensure thermal continuity across material boundaries.
 
 ---
@@ -52,9 +52,9 @@ The physics loss uses a **Laplacian Kernel** ($\nabla^2$) to penalize physically
 
 The final model is optimized using 8-bit Static Quantization (QNNPACK) for real-time inference.
 
-- Original Size: ~120MB
+- Original Size: ~30MB
 
-- Quantized Size: ~30MB
+- Quantized Size: ~31MB
 
 - Target Platform: Android (Companion Repo: To be made soon)
 
